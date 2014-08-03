@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D1D9A82193EF73D00B4A04F"
-               BuildableName = "Lesson 1"
-               BlueprintName = "Lesson 1"
-               ReferencedContainer = "container:Lesson 1.xcodeproj">
+               BlueprintIdentifier = "1D23C41E19494A8300E7051F"
+               BuildableName = "Lesson 2"
+               BlueprintName = "Lesson 2"
+               ReferencedContainer = "container:Lesson 2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D1D9A82193EF73D00B4A04F"
-            BuildableName = "Lesson 1"
-            BlueprintName = "Lesson 1"
-            ReferencedContainer = "container:Lesson 1.xcodeproj">
+            BlueprintIdentifier = "1D23C41E19494A8300E7051F"
+            BuildableName = "Lesson 2"
+            BlueprintName = "Lesson 2"
+            ReferencedContainer = "container:Lesson 2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D1D9A82193EF73D00B4A04F"
-            BuildableName = "Lesson 1"
-            BlueprintName = "Lesson 1"
-            ReferencedContainer = "container:Lesson 1.xcodeproj">
+            BlueprintIdentifier = "1D23C41E19494A8300E7051F"
+            BuildableName = "Lesson 2"
+            BlueprintName = "Lesson 2"
+            ReferencedContainer = "container:Lesson 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D1D9A82193EF73D00B4A04F"
-            BuildableName = "Lesson 1"
-            BlueprintName = "Lesson 1"
-            ReferencedContainer = "container:Lesson 1.xcodeproj">
+            BlueprintIdentifier = "1D23C41E19494A8300E7051F"
+            BuildableName = "Lesson 2"
+            BlueprintName = "Lesson 2"
+            ReferencedContainer = "container:Lesson 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
