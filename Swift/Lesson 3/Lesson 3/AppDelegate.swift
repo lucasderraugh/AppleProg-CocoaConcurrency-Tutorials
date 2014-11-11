@@ -32,11 +32,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
                 
                 self.count += 10
-                let view = NSImageView(frame: NSMakeRect(self.count, self.window.contentView.frame.height, 300, 200))
-                view.image = NSImage(contentsOfURL: element).thumbnailImage()
+                let view = NSImageView(frame: NSMakeRect(self.count, (self.window.contentView as NSView).frame.height, 300, 200))
+                view.image = NSImage(contentsOfURL: element)!.thumbnailImage()
                 
                 dispatch_sync(dispatch_get_main_queue(), {
-                    self.window.contentView.addSubview(view)
+                    (self.window.contentView as NSView).addSubview(view)
                     NSAnimationContext.beginGrouping()
                     NSAnimationContext.currentContext().duration = 4.0
                     view.animator().setFrameOrigin(NSMakePoint(self.count, 0))

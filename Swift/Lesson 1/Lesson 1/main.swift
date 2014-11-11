@@ -11,7 +11,7 @@ import Foundation
 class Simple: NSObject {
     var val = 0
     func incrVal1000() {
-        for _ in 0..1000 {
+        for _ in 0..<1000 {
             let v = val + 1
             println(v)
             val = v
