@@ -92,6 +92,8 @@
 		1DE8242119ECF67500737DB0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Lucas Derraugh";
 				TargetAttributes = {
@@ -271,6 +273,7 @@
 				1DE8244519ECF67500737DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

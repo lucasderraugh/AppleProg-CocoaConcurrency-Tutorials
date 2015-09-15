@@ -15,7 +15,7 @@ class Simple: NSObject {
         for _ in 0..<1000 {
             lock.lock()
             let v = val + 1
-            println("Val+1: \(v)")
+            print("Val+1: \(v)")
             val = v
             lock.unlock()
         }
