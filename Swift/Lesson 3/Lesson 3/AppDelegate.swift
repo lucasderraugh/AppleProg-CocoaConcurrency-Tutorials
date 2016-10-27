@@ -14,33 +14,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var window: NSWindow!
 	var count: CGFloat = 0.0
 	
-	@IBAction func startImageFall(sender: NSButton) {
-		let url = NSURL(fileURLWithPath: "/Library/Desktop Pictures")
-		let fileManager = NSFileManager.defaultManager()
-		let dirEnum = fileManager.enumeratorAtURL(url, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles, errorHandler: nil)
+	@IBAction func startImageFall(_ sender: NSButton) {
+		let url = URL(fileURLWithPath: "/Library/Desktop Pictures")
+		let fileManager = FileManager.default
+        let contents = (try? fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)) ?? []
 		
 		sender.animator().alphaValue = 0
 		
-		while let element = dirEnum?.nextObject() as? NSURL {
-			var isDirectory: AnyObject?
-			try! element.getResourceValue(&isDirectory, forKey: NSURLIsDirectoryKey)
-			if let isDir = isDirectory as? NSNumber {
-				if isDir == NSNumber(int: 1) {
-					continue
-				}
-			}
+        for url in contents {
+			let resourceValues = try? url.resourceValues(forKeys: [URLResourceKey.isDirectoryKey])
+            if (resourceValues?.isDirectory ?? true) {
+                continue
+            }
 			
 			self.count += 10
-			dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { [x = self.count] in
+            DispatchQueue.global(qos: .default).async { [x = self.count] in
 				let view = NSImageView(frame: NSMakeRect(x, self.window.contentView!.frame.height, 300, 200))
-				view.image = NSImage(contentsOfURL: element)!.thumbnailImage()
+                guard let image = NSImage(contentsOf: url)?.thumbnailImage() else {
+                    return
+                }
+                view.image = image
 				
-				dispatch_async(dispatch_get_main_queue()) {
+				DispatchQueue.main.async {
 					self.window.contentView!.addSubview(view)
-					NSAnimationContext.beginGrouping()
-					NSAnimationContext.currentContext().duration = 4.0
-					view.animator().setFrameOrigin(NSMakePoint(x, 0))
-					NSAnimationContext.endGrouping()
+                    NSAnimationContext.runAnimationGroup({ context in
+                        context.duration = 4.0
+                        view.animator().setFrameOrigin(NSMakePoint(x, 0))
+                    })
 				}
 			}
 		}
@@ -53,7 +53,7 @@ extension NSImage {
 		let thumbnailImage = NSImage(size: thumbnailSize)
 		
 		thumbnailImage.lockFocus()
-		self.drawInRect(NSMakeRect(0, 0, thumbnailSize.width, thumbnailSize.height), fromRect: NSZeroRect, operation: NSCompositingOperation.CompositeCopy, fraction: 1.0)
+		self.draw(in: NSMakeRect(0, 0, thumbnailSize.width, thumbnailSize.height), from: NSZeroRect, operation: NSCompositingOperation.copy, fraction: 1.0)
 		thumbnailImage.unlockFocus()
 		
 		return thumbnailImage

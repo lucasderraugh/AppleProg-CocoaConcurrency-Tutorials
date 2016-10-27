@@ -23,7 +23,7 @@ class Simple: NSObject {
 }
 
 let s = Simple()
-NSThread.detachNewThreadSelector("incrVal1000", toTarget: s, withObject: nil)
+Thread.detachNewThreadSelector(#selector(Simple.incrVal1000), toTarget: s, with: nil)
 s.incrVal1000()
 
 sleep(1)

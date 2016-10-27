@@ -11,18 +11,7 @@
 		1DC582991A11D73100FF27FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC582981A11D73100FF27FC /* main.m */; };
 		1DC5829B1A11D73100FF27FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5829A1A11D73100FF27FC /* Images.xcassets */; };
 		1DC5829E1A11D73100FF27FC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5829C1A11D73100FF27FC /* MainMenu.xib */; };
-		1DC582AA1A11D73100FF27FC /* Lesson_3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC582A91A11D73100FF27FC /* Lesson_3Tests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1DC582A41A11D73100FF27FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1DC582881A11D73100FF27FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1DC5828F1A11D73100FF27FC;
-			remoteInfo = "Lesson 3";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1DC582901A11D73100FF27FC /* Lesson 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,20 +21,10 @@
 		1DC582981A11D73100FF27FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DC5829A1A11D73100FF27FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1DC5829D1A11D73100FF27FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		1DC582A31A11D73100FF27FC /* Lesson 3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lesson 3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DC582A81A11D73100FF27FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DC582A91A11D73100FF27FC /* Lesson_3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_3Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1DC5828D1A11D73100FF27FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DC582A01A11D73100FF27FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,7 +38,6 @@
 			isa = PBXGroup;
 			children = (
 				1DC582921A11D73100FF27FC /* Lesson 3 */,
-				1DC582A61A11D73100FF27FC /* Lesson 3Tests */,
 				1DC582911A11D73100FF27FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				1DC582901A11D73100FF27FC /* Lesson 3.app */,
-				1DC582A31A11D73100FF27FC /* Lesson 3Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,23 +71,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1DC582A61A11D73100FF27FC /* Lesson 3Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1DC582A91A11D73100FF27FC /* Lesson_3Tests.m */,
-				1DC582A71A11D73100FF27FC /* Supporting Files */,
-			);
-			path = "Lesson 3Tests";
-			sourceTree = "<group>";
-		};
-		1DC582A71A11D73100FF27FC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1DC582A81A11D73100FF27FC /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,24 +91,6 @@
 			productReference = 1DC582901A11D73100FF27FC /* Lesson 3.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1DC582A21A11D73100FF27FC /* Lesson 3Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC582B01A11D73100FF27FC /* Build configuration list for PBXNativeTarget "Lesson 3Tests" */;
-			buildPhases = (
-				1DC5829F1A11D73100FF27FC /* Sources */,
-				1DC582A01A11D73100FF27FC /* Frameworks */,
-				1DC582A11A11D73100FF27FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1DC582A51A11D73100FF27FC /* PBXTargetDependency */,
-			);
-			name = "Lesson 3Tests";
-			productName = "Lesson 3Tests";
-			productReference = 1DC582A31A11D73100FF27FC /* Lesson 3Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,10 +102,6 @@
 				TargetAttributes = {
 					1DC5828F1A11D73100FF27FC = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					1DC582A21A11D73100FF27FC = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 1DC5828F1A11D73100FF27FC;
 					};
 				};
 			};
@@ -181,7 +119,6 @@
 			projectRoot = "";
 			targets = (
 				1DC5828F1A11D73100FF27FC /* Lesson 3 */,
-				1DC582A21A11D73100FF27FC /* Lesson 3Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,13 +130,6 @@
 			files = (
 				1DC5829B1A11D73100FF27FC /* Images.xcassets in Resources */,
 				1DC5829E1A11D73100FF27FC /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DC582A11A11D73100FF27FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,23 +145,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC5829F1A11D73100FF27FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DC582AA1A11D73100FF27FC /* Lesson_3Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1DC582A51A11D73100FF27FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1DC5828F1A11D73100FF27FC /* Lesson 3 */;
-			targetProxy = 1DC582A41A11D73100FF27FC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1DC5829C1A11D73100FF27FC /* MainMenu.xib */ = {
@@ -343,42 +257,6 @@
 			};
 			name = Release;
 		};
-		1DC582B11A11D73100FF27FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Lesson 3Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lesson 3.app/Contents/MacOS/Lesson 3";
-			};
-			name = Debug;
-		};
-		1DC582B21A11D73100FF27FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Lesson 3Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lesson 3.app/Contents/MacOS/Lesson 3";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -398,14 +276,7 @@
 				1DC582AF1A11D73100FF27FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1DC582B01A11D73100FF27FC /* Build configuration list for PBXNativeTarget "Lesson 3Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DC582B11A11D73100FF27FC /* Debug */,
-				1DC582B21A11D73100FF27FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
